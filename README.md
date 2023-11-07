@@ -1,1 +1,1 @@
-# B2C_APIAutomation
+# kamivision-ApiAutomation
