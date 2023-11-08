@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="platform_being_executed">
+        <parameter name="platform" value="platform_being_executed"/>
+        <classes>
+            <class name="com.kami.getAPI"/>
+        </classes>
+    </test>
+</suite>
