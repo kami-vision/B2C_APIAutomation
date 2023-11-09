@@ -7,10 +7,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -49,8 +55,12 @@ public class ExtentManager {
 		WebDriver driver=null;
 		try {
 			String filepath = "file:///" + System.getProperty("user.dir") + "/test-output/Automation-report.html";
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--disable-blink-features", "BlockCredentialedSubresources");
+			chromeOptions.addArguments("--start-fullscreen");
+			chromeOptions.addArguments("--incognito");
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(chromeOptions);
 			Thread.sleep(10000);
 			driver.get(filepath);
 			getScreenshot(driver);
