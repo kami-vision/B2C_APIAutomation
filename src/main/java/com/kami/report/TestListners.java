@@ -69,7 +69,7 @@ public class TestListners implements ITestListener {
 		if(extent!=null) {
 			extent.flush();
 		}
-		
+		ExtentManager.openBrowserAndTakeScreenshot();
 	}
 	
 	public static void fail(String msg) {
