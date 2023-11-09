@@ -51,6 +51,7 @@ public class ExtentManager {
 			String filepath = "file:///" + System.getProperty("user.dir") + "/test-output/Automation-report.html";
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			Thread.sleep(10000);
 			driver.get(filepath);
 			getScreenshot(driver);
 		}catch(Exception e){
