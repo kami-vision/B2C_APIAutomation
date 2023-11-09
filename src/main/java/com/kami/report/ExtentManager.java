@@ -59,7 +59,7 @@ public class ExtentManager {
 			chromeOptions.addArguments("--disable-blink-features", "BlockCredentialedSubresources");
 			chromeOptions.addArguments("--start-fullscreen");
 			chromeOptions.addArguments("--incognito");
-			chromeOptions.addArguments("head");
+			chromeOptions.addArguments("--headless");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(chromeOptions);
 			Thread.sleep(10000);
