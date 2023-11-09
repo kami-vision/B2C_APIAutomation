@@ -65,6 +65,7 @@ public class ExtentManager {
 			Thread.sleep(10000);
 			driver.get(filepath);
 			getScreenshot(driver);
+			Thread.sleep(10000);
 		}catch(Exception e){
 e.printStackTrace();
 		}finally {
