@@ -17,6 +17,7 @@ public class ExtentManager {
 	}
 	
 	public static String reportName() {
-		return "Automation-"+new SimpleDateFormat("MM.dd.yyyy").format(new Date())+".html";
+		//return "Automation-"+new SimpleDateFormat("MM.dd.yyyy").format(new Date())+".html";
+		return "Automation-report.html";
 	}
 }
